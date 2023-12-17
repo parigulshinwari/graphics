@@ -1,0 +1,58 @@
+#how to change the background colour
+
+import turtle
+import math
+bob.getscreen().bgcolor("orange")
+bob.color("yellow", "red")
+bob.speed(10)
+
+bob.begin_fill()
+for i in range (100):
+    bob.forward(math.sqrt(i)*10)
+    bob.left(i%90)
+
+bob.end_fill()
+
+turtle.done()
+
+#make complex graphics
+
+import turtle
+import math
+bob.getscreen().bgcolor("orange")
+bob.color("yellow", "red")
+bob.speed(10)
+
+bob.begin_fill()
+#for big star
+
+def star(bob):
+    for i in range (5):
+        bob.forward(100)
+        bob.left(216)
+
+bob.end_fill()
+
+#for small stars in big star
+import turtle
+bob = turtle.Turtle()
+bob.getscreen().bgcolor("orange")
+bob.color("yellow", "red")
+bob.speed(20)
+bob.penup()
+bob.goto((-200, 100))
+bob.pendown()
+
+bob.begin_fill()
+#for big star
+
+def star(bob, size):
+    if size <= 10:
+        return
+    else:
+        for i in range (5):
+            bob.forward(size)
+            star(turtle, size/2)
+            turtle.left(216)
+star(bob,360)
+turtle.done()
